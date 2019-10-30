@@ -1,0 +1,25 @@
+{
+  "name": "lucid-landing-page",
+  "version": "1.0.0",
+  "description": "Lucid Motors - Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "grunt-cli": "^1.3.2",
+    "grunt-sass": "^3.1.0",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.13.0",
+    "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}

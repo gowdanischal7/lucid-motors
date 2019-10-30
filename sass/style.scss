@@ -1,0 +1,225 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../node_modules/bootstrap/scss/utilities/spacing";
+@import "../node_modules/bootstrap/scss/utilities/flex";
+
+$enable-grid-classes: true !default;
+$grid-columns:      12;
+$grid-gutter-width: 32px;
+
+$grid-breakpoints: (
+  sm: 0,
+  md: 768px,
+  lg: 1020px
+);
+
+@include _assert_ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px
+);
+
+@include _assert_ascending($container-max-widths, "$container-max-widths");
+
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), 
+       url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  font-family: 'Open Sans' !important;
+  color: #2D2926;
+}
+
+@include media-breakpoint-up(sm) {
+  .br-lg {
+    display: inline;
+    border-bottom: thin solid black;
+  }
+
+  .logo-position {
+    text-align: center !important;
+  }
+
+  .section {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .title-position {
+    position: absolute;
+    top: 22px;
+    left: 19px;
+    right: 73px;
+    bottom: 210px;
+    font-size: 24px !important;
+    text-align: left;
+    color: #2D2926;
+  }
+
+  .horz-margin {
+    margin-right: 18px !important;
+    margin-left: 18px !important;
+  }
+
+  .heading-1 {
+    font-size: 18px !important;
+    margin-top: 50px !important;
+    margin-bottom: 27px !important;
+    text-align: left;
+  }
+
+  .heading-2 {
+    font-size: 24px !important;
+    margin-top: 29px !important;
+    margin-bottom: 39px !important;
+    height: 18px;
+    text-align: left;
+  }
+
+  .content {
+    font-size: 14px !important;
+    margin-bottom: 35px !important;
+  }
+
+  .btn-brown {
+    color: white !important;
+    background-color: #B18F4E !important;
+    border-color: #B18F4E !important;
+    margin-right: 16px;
+    border-radius: 0 !important;
+    font-size: 12px !important;
+    margin-top: 27px !important;
+  }
+
+  .bg-grey {
+    background-color:#F0EFEF !important;
+  }
+
+  footer {
+    font-size: 11px !important;
+  }
+
+  footer-logo {
+    margin-top: 37px !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .logo-position {
+    text-align: left !important;
+  }
+
+  .title-position {
+    position: absolute;
+    top: 60%;
+    left: 4%;
+    bottom: 16%;
+    right: 62%;
+    font-size: 36px !important;
+    color: #FFFFFF;
+  }
+
+  .horz-margin {
+    margin-right: 39px !important;
+    margin-left: 39px !important;
+  }
+
+  .heading-1 {
+    font-size: 30px !important;
+    margin-top: 49px !important;
+    margin-bottom: 29px !important;
+  }
+
+  .heading-2 {
+    font-size: 24px !important;
+    margin-top: 28px !important;
+    margin-bottom: 43px !important;
+  }
+
+  .content {
+    font-size: 15px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .btn-brown {
+    margin-top: 33px !important;
+  }
+
+  footer-logo {
+    margin-top: 31px !important;
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .logo-position {
+    margin-left: 1.5rem !important;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .br-lg {
+    display: inline;
+    border-bottom: none;
+    border-right: thin solid black;
+  }
+
+  .section {
+    margin-bottom: 45px;
+  }
+  
+  .logo-position {
+    text-align: center !important;
+  }
+
+  .title-position {
+    position: absolute;
+    top: 62%;
+    left: 2%;
+    bottom: 13.5%;
+    right: 62%;
+    font-size: 48px !important;
+    color: #FFFFFF;
+  }
+
+  .heading-1 {
+    font-size: 30px !important;
+    margin-top: 26px !important;
+    margin-bottom: 31px !important;
+  }
+
+  .heading-2 {
+    font-size: 24px !important;
+    margin-top: 26px !important;
+    margin-bottom: 39px !important;
+  }
+
+  .content {
+    font-size: 16px !important;
+    margin-bottom: 86px !important;
+  }
+
+  .btn-brown {
+    margin-top: 40px !important;
+  }
+
+  footer {
+    font-size: 12px !important;
+  }
+
+  footer-logo {
+    margin-top: 35px !important;
+  }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
